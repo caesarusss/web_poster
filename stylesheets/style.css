@@ -1,0 +1,57 @@
+@import 'reset.css';
+@import 'content.css';
+@import 'responsive.css';
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../fonts/helveticaneuecyr_roman.otf);
+}
+
+body {
+    width: 100vw;
+    max-width: 100%;
+}
+
+.container {
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    border: 1px solid #000000;
+    grid-template: repeat(5, 1fr) / repeat(3, 1fr) ;   
+    grid-template-columns: 1fr 641px;
+    grid-template-areas:
+    "l l l l l l"
+    "a a a b b b"
+    "c c d d e e"
+    "f f f f e e"
+    "g g h h i i"
+    "j j j k k k"
+    "m m m m m m";
+}
+
+.container2 {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr) ;
+}
+
+.container2 * {
+    border: 1px solid #000000;
+}
+
+section {
+    border: 1px solid #000000;
+}
+
+.line1 { grid-area: l;}
+.line2block1 { grid-area: a; }
+.line2block2 { grid-area: b; }
+.line3block1 { grid-area: c; }
+.line3block2 { grid-area: d; }
+.line3block3 { grid-area: e; }
+.line4block1 { grid-area: f; }
+.line5block1 { grid-area: g; }
+.line5block2 { grid-area: h; }
+.line5block3 { grid-area: i; }
+.line6block1 { grid-area: j; }
+.line6block2 { grid-area: k; }
+.line7 { grid-area: m; }
